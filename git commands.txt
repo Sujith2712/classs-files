@@ -1,0 +1,201 @@
+            Git 
+----------------------------------
+
+git clone https://github.com/Sujith2712/devops.git
+  143  cd devops
+  144  touch file1
+  145  vi file1
+  146  touch file.txt
+  147  vi file
+  148  vi file.txt
+  149  ls
+  150  rm file1
+  151  ls
+  152  rm file
+  153  ls
+  154  git config --global user.name "Sujith2712"
+  155  git config --global user.email "dsuji3@gmail.com"
+  156  git config --list
+  157  git add file.txt
+  158  git status
+  159  touch file1.txt
+  160  git status
+  161  git commit -m "file.txt done"
+  162  git status
+  163  git push -u origin master
+  164  vi file.txt
+  165  git checkout file.txt
+  166  cat file.txt
+  167  git log --oneline
+  168  cat file.txt
+  169  git remote -v
+--------------------------------------------------
+ git clone https://github.com/Sujith2712/devops.git
+  216  cd devops
+  217  git branch development
+  218  git branch
+  219  git checkout development
+  220  touch exp3.txt
+  221  git checkout master
+  222  ls
+  223  git checkout development
+  224  git add exp3.txt
+  225  git commit -m "sujith new check"
+  226  git checkout master
+  227  ls
+  228  git checkout development
+  229  ls
+  230  git checkout master
+  231  git checkout development
+  232  touch a b c d e f
+  233  ls
+  234  git add .
+  235  git add .
+  236  git commit -m "commiting"
+  237  git checkout master
+  238  git merge development master
+  239  ls
+  240  touch example.txt
+  241  git add example.txt
+  242  git commit -m "first file"
+  243  touch sujith.txt
+  244  git add sujith.txt
+  245  git commit -m "second file"t master
+  246  touch uday.txt
+  247  git add uday.txt
+  248  git commit -m "third file"
+  249  ls
+  250  git log --oneline
+  251  git checkout development
+  252  git cherry-pick cd4b46b
+  253  ls
+  254  git checkout sujith.txt
+  255  git log
+  256  history
+  257  touch stash.txt
+  258  vi stash.txt
+  259  git add stash.txt
+  260  git commit -m "stash.txt"
+  261  ls
+  262  git status
+  263  vi stash.txt
+  264  git status
+  265  git add stash.txt
+  266  git stash
+  267  cat stash.txt
+  268  git staatus
+  269  git status
+  270  git stash list
+  271  git stash apply stash@{0}
+  272  cat stash.txt
+  273  git status
+  274  git dif
+  275  git diff
+  276  git checkout master
+--------------------------------------------------------------------------------------------------
+git reset -- soft Head
+  279  cd
+  280  cd desktop
+  281  ls
+  282  git show head
+  283  cd sample1
+  284  git checkout
+  285  git checkout master
+  286  git checkout master
+  287  cd
+  288  git checkout master
+  289  git checkout masterexit
+  290  git refrog
+  291  git reflog
+  292  cd /desktop
+  293  cd desktop
+  294  cd
+  295  cd desktop
+  296  git checkout master
+  297  git reflog
+  298  cd devops
+  299  git checkout master
+  300  git checkout development
+  301  git reflog
+  302  git reset --soft HEAD@{0}
+  303  git status
+  304  touch sujith.txt
+  305  vi sujith.txt
+  306  git add sujith.txt
+  307  git commit -m "new commit"
+  308  vi sujith.txt
+  309  git add sujith.txt
+  310  git commit -m "new commit"
+  311  git commit -m "new commit1"
+  312  git reflog
+  313  git reset --soft HEAD@{0}
+  314  git status
+  315  cat sujith.txt
+  316  git reset --soft HEAD@{1}
+  317  git status
+  318  cat sujith.txt
+  319  git reset --soft 0fde47d
+  320  cat sujith.txt
+  321  git reset --soft HEAD~1
+  322  git status
+  323  cat sujith.txt
+  324  git reset --mixed HEAD~1
+  325  git status
+  326  cat sujith.txt
+  327  git add .
+  328  git commit -m "all"
+  329  git reset --hard HEAD~1
+  330  git status
+  331  cat sujith.txt
+  332  ls
+  333  vi suji1
+  334  git add suji1
+  335  git commit -m "suji1"
+  336  git add suji1
+  337  git commit -m "suji1"
+  338  vi suji1
+  339  git add suji1
+  340  git commit -m "suji2"
+  341  vi suji1
+  342  git add suji1
+  343  git commit -m "suji3"
+  344  git reflog
+  345  git reset --hard HEAD~2
+  346  git reflog
+  347  cat suji1
+  348  git reset --hard HEAD~1
+  349  git reflog
+  350  cat suji1
+  351  git reset --hard HEAD~0
+  352  cat suji1
+  353  git reflog
+  354  cd devops
+  355  git checkout master
+  356  touch 1
+  357  vi 1
+  358  git add 1
+  359  git commit -m "1st"
+  360  vi 1
+  361  git add 1
+  362  git commit -m "2nd"
+  363  vi 1
+  364  git add 1
+  365  git commit -m "3rd"
+  366  vi 1
+  367  git add 1
+  368  git commit -m "4th"
+  369  git reflog
+  370  git reset --hard HEAD~2
+  371  git reflog
+  372*
+  373  git reset --hard HEAD~1
+  374  cat 1
+  375  git reset --hard HEAD@{1}
+  376  cat 1
+  377  git reset --hard HEAD@{3}
+  378  cat 1
+  379  git reset --soft HEAD~1
+  380  cat 1
+  381  git reflog
+
+
