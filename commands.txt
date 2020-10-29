@@ -1,0 +1,682 @@
+ 1  cd /bin
+    2  mkdir example
+    3  ls
+    4  cd /example
+    5  cd example
+    6  touch exam
+    7  vi exam
+    8  cat exam
+    9  mv /exam /opt
+   10  mv exam /opt
+   11  cd /opt
+   12  ls
+   13  cd exam
+   14  pwd
+   15  mkdir cloud
+   16  ls
+   17  pws
+   18  pwd
+   19  cd cloud
+   20  ls
+   21  pwd
+   22  cd opt
+   23  cd opd
+   24  cd opt
+   25  cd /opt
+   26  pud 	
+   27  pwd
+   28  cd /root
+   29  pwd
+   30  mkdir sujith
+   31  cd sujith
+   32  mkdir sujith1
+   33  cd
+   34  cd /sujith1
+   35  pwd
+   36  cd sujith/sujith1
+   37  cd opt
+   38  cd /opd
+   39  cd /opt
+   40  mkdir xyz
+   41  cd
+   42  cd opt/xyz
+   43  cd xyz
+   44  cd /opt/xyz
+   45  cd ..
+   46  cd xyz
+   47  find /-name su*
+   48  find /-name cl*
+   49  find / -name cl*
+   50  touch xyz
+   51  ls
+   52  touch .ryz
+   53  ls
+   54  ls -la
+   55  vi cloud
+   56  cat cloud
+   57  cat cloud | grep sujith
+   58  mv cloud devops
+   59  pwd
+   60  ls
+   61  cd..
+   62  cd ..
+   63  ls
+   64  cd xyz
+   65  cd /devops
+   66  cd root
+   67  cd devops
+   68  cd /devops
+   69  cd root
+   70  touch xyz
+   71  ls
+   72  yum install dig -y
+   73  yum update -y
+   74  dig www.facebook.cpom
+   75  yum install bind-utils -y
+   76  dig www.facebook.cpom
+   77  nslookup www.facebook.com
+   78  nslookup www.facebook.com www.google.com
+   79  netstat -plunt |grep 22
+   80  touch xyz
+   81  ls
+   82  rm xyz
+   83  rm -rf
+   84  ls
+   85  rm-rf xyz
+   86  rm -rf xyz
+   87  netstat -plunt | grep 22
+   88  ls
+   89  toych xyz
+   90  touch xyz
+   91  vi xyz
+   92  head -i 10
+   93  head -3 xyz
+   94  head -i 10 xyz
+   95  tail -3 xyz
+   96  ps -ef
+   97  uname
+   98  uname -funame -f
+   99  uname --help
+  100  uname -s
+  101  uname -n
+  102  uname -r
+  103  uname -v
+  104  uname -m
+  105  uname -p
+  106  wget
+  107  wget https://download.winzip.com/gl/nkln/winzip25-downwz.exe
+  108  yum install wget -y
+  109  wget https://download.winzip.com/gl/nkln/winzip25-downwz.exe
+  110  ls
+  111  yum install unzip -y
+112 df --help to check all the commands in this files
+113 df -h to check storage in the server.
+  df --help
+  114  df -h
+  115  useradd abc
+  116  ls -la /home
+  117  cat /etc/passwd
+------------------------------------
+ 1  cd /bin
+    2  mkdir example
+    3  ls
+    4  cd /example
+    5  cd example
+    6  touch exam
+    7  vi exam
+    8  cat exam
+    9  mv /exam /opt
+   10  mv exam /opt
+   11  cd /opt
+   12  ls
+   13  cd exam
+   14  pwd
+   15  mkdir cloud
+   16  ls
+   17  pws
+   18  pwd
+   19  cd cloud
+   20  ls
+   21  pwd
+   22  cd opt
+   23  cd opd
+   24  cd opt
+   25  cd /opt
+   26  pud
+   27  pwd
+   28  cd /root
+   29  pwd
+   30  mkdir sujith
+   31  cd sujith
+   32  mkdir sujith1
+   33  cd
+   34  cd /sujith1
+   35  pwd
+   36  cd sujith/sujith1
+   37  cd opt
+   38  cd /opd
+   39  cd /opt
+   40  mkdir xyz
+   41  cd
+   42  cd opt/xyz
+   43  cd xyz
+   44  cd /opt/xyz
+   45  cd ..
+   46  cd xyz
+   47  find /-name su*
+   48  find /-name cl*
+   49  find / -name cl*
+   50  touch xyz
+   51  ls
+   52  touch .ryz
+   53  ls
+   54  ls -la
+   55  vi cloud
+   56  cat cloud
+   57  cat cloud | grep sujith
+   58  mv cloud devops
+   59  pwd
+   60  ls
+   61  cd..
+   62  cd ..
+   63  ls
+   64  cd xyz
+   65  cd /devops
+   66  cd root
+   67  cd devops
+   68  cd /devops
+   69  cd root
+   70  touch xyz
+   71  ls
+   72  yum install dig -y
+   73  yum update -y
+   74  dig www.facebook.cpom
+   75  yum install bind-utils -y
+   76  dig www.facebook.cpom
+   77  nslookup www.facebook.com
+   78  nslookup www.facebook.com www.google.com
+   79  netstat -plunt |grep 22
+   80  touch xyz
+   81  ls
+   82  rm xyz
+   83  rm -rf
+   84  ls
+   85  rm-rf xyz
+   86  rm -rf xyz
+   87  netstat -plunt | grep 22
+   88  ls
+   89  toych xyz
+   90  touch xyz
+   91  vi xyz
+   92  head -i 10
+   93  head -3 xyz
+   94  head -i 10 xyz
+   95  tail -3 xyz
+   96  ps -ef
+   97  uname
+   98  uname -funame -f
+   99  uname --help
+  100  uname -s
+  101  uname -n
+  102  uname -r
+  103  uname -v
+  104  uname -m
+  105  uname -p
+  106  wget
+  107  wget https://download.winzip.com/gl/nkln/winzip25-downwz.exe
+  108  yum install wget -y
+  109  wget https://download.winzip.com/gl/nkln/winzip25-downwz.exe
+  110  ls
+  111  yum install unzip -y
+  112  history
+  113  df --help
+  114  df -h
+  115  useradd abc
+  116  ls -la /home
+  117  cat /etc/passwd
+  118  history
+  119  mkdir cloud
+  120  ls
+  121  rm sujith
+  122  pwd
+  123  mkdir devops
+  124  ls
+  125  cd /devops
+  126  ls
+  127  cd /devops
+  128  cd /
+  129  cd devop
+  130  cd devops
+  131  cd /devops
+  132  cd devops
+  133  mkdir uday
+  134  ls
+  135  exit
+  136  mkdir uday
+  137  ls
+  138  cd uday
+  139  touch kiran
+  140  ls
+  141  cd kiran
+  142  mkdir devops
+  143  ls
+  144  cd devops
+  145  touch xyz.txt
+  146  ls
+  147  ln -s /root/uday/devops/xyz.txt /root/uday
+  148  cd ..
+  149  ls
+  150  ln /root/uday/devops/xyz.txt /root/uday
+  151  rm xyz.txt
+  152  ls
+  153  ln /root/uday/devops/xyz.txt /root/uday
+  154  ls
+  155  xyz.txt
+  156  vi xyz.txt
+  157  cat xyz.txt
+  158  cd devops
+  159  rm xyz.txt
+  160  cat xyz.txt
+  161  cd ..
+  162  cat xyz.txt
+
+
+----------------------------------
+
+    1  passwd root
+    2  cd ..
+    3  ls -la /etc/ssh | grep sshd_config`
+    4  cd /etc
+    5  cd /ssh
+    6  cd ssh
+    7  ls
+    8  vi ssh_config
+    9  vi sshd_config
+   10  service sshd restart
+   11  cd /etc
+   12  cd ..
+   13  touch txt
+   14  exit
+   15  cd opt
+   16  cd /opt
+   17  ls
+   18  history
+-------------------------------------------------------
+ 1  cd /bin
+    2  mkdir example
+    3  ls
+    4  cd /example
+    5  cd example
+    6  touch exam
+    7  vi exam
+    8  cat exam
+    9  mv /exam /opt
+   10  mv exam /opt
+   11  cd /opt
+   12  ls
+   13  cd exam
+   14  pwd
+   15  mkdir cloud
+   16  ls
+   17  pws
+   18  pwd
+   19  cd cloud
+   20  ls
+   21  pwd
+   22  cd opt
+   23  cd opd
+   24  cd opt
+   25  cd /opt
+   26  pud
+   27  pwd
+   28  cd /root
+   29  pwd
+   30  mkdir sujith
+   31  cd sujith
+   32  mkdir sujith1
+   33  cd
+   34  cd /sujith1
+   35  pwd
+   36  cd sujith/sujith1
+   37  cd opt
+   38  cd /opd
+   39  cd /opt
+   40  mkdir xyz
+   41  cd
+   42  cd opt/xyz
+   43  cd xyz
+   44  cd /opt/xyz
+   45  cd ..
+   46  cd xyz
+   47  find /-name su*
+   48  find /-name cl*
+   49  find / -name cl*
+   50  touch xyz
+   51  ls
+   52  touch .ryz
+   53  ls
+   54  ls -la
+   55  vi cloud
+   56  cat cloud
+   57  cat cloud | grep sujith
+   58  mv cloud devops
+   59  pwd
+   60  ls
+   61  cd..
+   62  cd ..
+   63  ls
+   64  cd xyz
+   65  cd /devops
+   66  cd root
+   67  cd devops
+   68  cd /devops
+   69  cd root
+   70  touch xyz
+   71  ls
+   72  yum install dig -y
+   73  yum update -y
+   74  dig www.facebook.cpom
+   75  yum install bind-utils -y
+   76  dig www.facebook.cpom
+   77  nslookup www.facebook.com
+   78  nslookup www.facebook.com www.google.com
+   79  netstat -plunt |grep 22
+   80  touch xyz
+   81  ls
+   82  rm xyz
+   83  rm -rf
+   84  ls
+   85  rm-rf xyz
+   86  rm -rf xyz
+   87  netstat -plunt | grep 22
+   88  ls
+   89  toych xyz
+   90  touch xyz
+   91  vi xyz
+   92  head -i 10
+   93  head -3 xyz
+   94  head -i 10 xyz
+   95  tail -3 xyz
+   96  ps -ef
+   97  uname
+   98  uname -funame -f
+   99  uname --help
+  100  uname -s
+  101  uname -n
+  102  uname -r
+  103  uname -v
+  104  uname -m
+  105  uname -p
+  106  wget
+  107  wget https://download.winzip.com/gl/nkln/winzip25-downwz.exe
+  108  yum install wget -y
+  109  wget https://download.winzip.com/gl/nkln/winzip25-downwz.exe
+  110  ls
+  111  yum install unzip -y
+  112  history
+  113  df --help
+  114  df -h
+  115  useradd abc
+  116  ls -la /home
+  117  cat /etc/passwd
+  118  history
+  119  mkdir cloud
+  120  ls
+  121  rm sujith
+  122  pwd
+  123  mkdir devops
+  124  ls
+  125  cd /devops
+  126  ls
+  127  cd /devops
+  128  cd /
+  129  cd devop
+  130  cd devops
+  131  cd /devops
+  132  cd devops
+  133  mkdir uday
+  134  ls
+  135  exit
+  136  ls
+  137  cd uday
+  138  ls
+  139  cd devops
+  140  touch soft.txt
+  141  ls
+  142  vi soft.txt
+  143  ln -s /root/cloud/devops/soft.txt /root/cloud
+  144  vi soft.txt
+  145  cd ..
+  146  ls
+  147  cat xyz.txt
+  148  cd devops
+  149  cd ..
+  150  sudo -i
+  151  touch dileep
+  152  vi dileep
+  153  pwd
+  154  ln -s /root/dileep /root/kumar
+  155  ls
+  156  vi dileep
+  157  vi kumar
+  158  vi deep
+  159  ln deep dream
+  160  ls
+  161  cat dream
+  162  vi deep
+  163  cat dream
+  164  cat kumar'
+  165  exit
+  166  ls
+  167  rm anaconda-ks.cfg
+  168  rm cloud deep devops dileep dream kumar
+  169  ls
+  170  rm devops
+  171  rm original-ks.cfg
+  172  rm xyz winzip25-downz.exe
+  173  ls
+  174  cd cloud
+  175  ls
+  176  mkdir devops
+  177  ls
+  178  rm soft.txt
+  179  cd devops
+  180  touch file1.txt
+  181  ls
+  182  cat >> file1.txt
+  183  cat file1.txt
+  184  vi file1.txt
+  185  ln -s /root/cloud/devops/file1.txt /root/cloud
+  186  cd ..
+  187  ls
+  188  cat file1.txt
+  189  cd devops
+  190  ls
+  191  vi file1.txt
+  192  cd ..
+  193  ls
+  194  cat file1.txt
+  195  cd devops
+  196  rm fil1.txt
+  197  rm file1.txt
+  198  ls
+  199  cd ..
+  200  ls
+  201  touch file2.txt
+  202  ls
+  203  cat >> file2
+  204  ls
+  205  rm file2
+  206  ls
+  207  ln /root/cloud/file2.txt /root/cloud/devops
+  208  ls
+  209  cd devops
+  210  ls
+  211  cat file2.txt
+  212  cd ..
+  213  ls
+  214  cat >> file2.txt
+  215  cat file2.txt
+  216  cd devops
+  217  ls
+  218  cat file2.txt
+  219  cd cloud
+  220   cd ..
+  221  ls
+  222  rm file2.txt
+  223  ls
+  224  rm file1.txt -y
+  225  rm file1.txt
+  226  ls
+  227  cd devops
+  228  ls
+  229  cat file2.txt
+  230  mkdir uday
+  231  ls
+  232  cd uday
+  233  touch kiran
+  234  ls
+  235  cd kiran
+  236  mkdir devops
+  237  ls
+  238  cd devops
+  239  touch xyz.txt
+  240  ls
+  241  ln -s /root/uday/devops/xyz.txt /root/uday
+  242  cd ..
+  243  ls
+  244  ln /root/uday/devops/xyz.txt /root/uday
+  245  rm xyz.txt
+  246  ls
+  247  ln /root/uday/devops/xyz.txt /root/uday
+  248  ls
+  249  xyz.txt
+  250  vi xyz.txt
+  251  cat xyz.txt
+  252  cd devops
+  253  rm xyz.txt
+  254  cat xyz.txt
+  255  cd ..
+  256  cat xyz.txt
+  257  history
+  258  ssh-copy-id 3.14.145.162
+  259  ssh-keygen
+  260  ssh-copy-id 3.14.145.162
+  261  cd ssh
+  262  cd /root/.ssh
+  263  ls
+  264  cd .ssh
+  265  ls
+  266  vi authorized_keys
+  267  cd .ssh
+  268  ls
+  269  vi id_rsa.pub
+  270  ssh 3.15.144.102
+  271  cd cloud
+  272  touch file2
+  273  scp -R /root/cloud/file2 root@3.15.144.102:/opt
+  274  scp  /root/cloud/file2 root@3.15.144.102:/opt
+  275  ssh 3.15.144.102
+  276  passwd sujith
+  277  cat /etc/shadow
+  278  df
+  279  du
+  280  lscpu
+  281  vmstat
+  282  top--help
+  283  top --help
+  284  top -hv
+  285  top -i
+  286  cd /etc
+  287  ls
+  288  cd ssh
+  289  ls
+  290  skbcsjf
+  291  sdfjfnslnf
+  292  wfsad
+  293  clear
+  294  useradd sujith
+  295  useradd sujith1
+  296  cd sujith1
+  297  cd /sujith1
+  298  sujith1 /etc/group
+  299  vi /etc/group
+  300  passwd sujith1
+  301  su sujith1
+  302  cat /etc/root
+  303  cat /etc/group
+  304  cat /etc/group |grep w\heel
+  305  cat /etc/group |grep wheel
+  306  usermod -ag wheel sujith1
+  307  cat /etc/group |grep wheel
+  308  su sujith1
+  309  vi sudo
+  310  visudo
+  311  root    ALL=(ALL)       ALL
+---------------------------------
+user permissions
+-----------------------------
+  313  useradd user1
+  314  su user1
+  315  passwd user1
+  316  su user1
+  317  ls
+  318  su user1
+  319  sudo su user1
+  320  useradd suji
+  321  passwd suji
+  322  usermod -aG wheel suji
+  323  su suji
+  324  sudo su suji
+  325  ls -la
+  326  sudo ls -la
+  327  chmod 777 /home/sujith/
+  328  su sujith
+  329  history
+------------------------------------
+java and maven version install in linux
+---------------------
+
+
+   1  alternatives --install /usr/bin/java java /opt/jdk1.8.0_201/bin/java 2
+    2  cd /opt
+    3  tar xzf jdk-8u261-linux-x64.tar.gz
+    4  tar -xvf jdk-8u261-linux-x64.tar.gz
+    5  cd jdk1.8.0_261/
+    6  alternatives --install /usr/bin/java java /opt/jdk1.8.0_261/bin/java 2
+    7  alternatives --config java
+    8  java -version
+    9  cd /etc/profile.d
+   10  touch java.sh
+   11  vi java.sh
+   12  cat java.sh
+   13  java -version
+   14  cd /opt
+   15  yum install wget -y
+   16  wget https://archive.apache.org/dist/maven/maven-3/3.5.3/binaries/apache-maven-3.5.3-bin.tar.gz
+   17  sudo tar -xvf apache-maven-3.5.3-bin.tar.gz
+   18  cd /etc/profile.d
+   19  touch maven.sh
+   20  vi maven.sh
+   21  source /etc/profile.d/maven.sh
+   22  mvn -version
+   23  cat maven.sh
+   24  vi maven.sh
+   25  mvn -version
+   26  mvn -v
+   27  vi maven.sh
+   28  mn --help
+   29  mvn -v
+   30  cat maven.sh
+   31  vi maven.sh
+   32  mvn -v
+   33  mvn -version
+   34  history
+   35  cd
+   36  mvn -v
+   37  cd /etc/profile.d
+   38  source maven.sh
+   39  mvn -v
+   40  history
+
+
