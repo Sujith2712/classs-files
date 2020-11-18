@@ -1,0 +1,178 @@
+    1  apt update -y
+    2  apt install docker.io -y
+    3  docker --version
+    4  docker pull tomcat
+    5  docker run -it -d --name tomactcontainer -p 8081:8080 tomcat
+    6  docker ps
+    7  docker images
+    8  docker run -it -d --name tommy -p 8085:8080 35064a4fcc93
+    9  docker ps
+   10  docker exec -it bd7960ae2b7e bash
+   11  docker run -it -d --name doggy -p 8083:8080 35064a4fcc93
+   12  docker ps
+   13  docker ecec -it d35192c3ad5f bash
+   14  docker exec -it d35192c3ad5f bash
+   15  docker run -it -d --name puppy -p 8083:8080 35064a4fcc93
+   16  netstat --plunt
+   17  netstat -plunt
+   18  history
+   19  docker pull sonarqube
+   20  docker run -it -d --name sonar -p 9091:9000
+   21  docker images
+   22  docker run -it -d --name sonar -p 9091:9000 b1002786c603
+   23  docker ps
+   24  ls
+   25  docker image
+   26  cd /home/
+   27  ls
+   28  cd ubuntu/
+   29  touch Dockerfile
+   30  vi Dockerfile
+   31  dockeer build -t .
+   32  docker build -t mycustomjava .
+   33  vi Dockerfile
+   34  docker build -t mycustomjava .
+   35  vi Dockerfile
+   36  docker build -t mycustomjava .
+   37  docker images
+   38  docker -it -d --name mydockerjava a83380657c35
+   39  docker ps
+   40  docker run -it -d --name mydockerjava a83380657c35
+   41  docker ps
+   42  docker exec -it a83380657c35
+   43  docker exec -it 65f7087545c1
+   44  docker exec -it 65f7087545c1 bash
+   45  git --version
+   46  docker exec -it 65f7087545c1 bash
+   47  docker ps
+   48  docker restart tommy
+   49  docker pd
+   50  docker ps
+   51  docker run -it -d --name tommy bd7960ae2b7e
+   52  docker exec -it bd7960ae2b7e
+   53  docker exec -it bd7960ae2b7e bash
+   54  pwd
+   55  mkdir 123
+   56  mkdir 345
+   57  cd 345
+   58  vi text.txt
+   59  ls
+   60  cat text.txt
+   61  ADD ls
+   62  ls
+   63  cd ..
+   64  ls
+   65  cd snap
+   66  ls
+   67  cd ..
+   68  touch Dockerfile
+   69  ls
+   70  vi Dockerfile
+   71  ls
+   72  pwd
+   73  ls
+   74  git clone https://github.com/Sujith2712/devopspractice.git
+   75  ls
+   76  cd devopspractice/
+   77  ls
+   78  cd ..
+   79  vi Dockerfile
+   80  pwd
+   81  vi Dockerfile
+   82  docker build -t sujith .
+   83  vi Dockerfile
+   84  docker build -t sujith .
+   85  docker images
+   86  docker run -it -d --name app 01fa953af83e
+   87  docker ps
+   88  docker run -it -d --name app1 01fa953af83e bash
+   89  docker ps
+   90  docker exec -it 9f92b7bdb3fb bash
+   91  vi Dockerfile
+   92  docker build -t sujith1 .
+   93  vi Dockerfile
+   94  docker build -t sujith3 .
+   95  vi Dockerfile
+   96  docker build -t sujith4 .
+   97  vi Dockerfile
+   98  docker build -t sujith5 .
+   99  vi Dockerfile
+  100  docker build -t sujith6 .
+  101  vi Dockerfile
+  102  docker build -t sujith7 .
+  103  vi Dockerfile
+  104  docker build -t sujith8 .
+  105  docker ps
+  106  docker images
+  107  docker run -it -d --name app3 449b45cd9227
+  108  docker ps
+  109  docker exec -it 449b45cd9227
+  110  docker run -it -d --name app3 449b45cd9227 bash
+  111  docker run -it -d --name app4 449b45cd9227 bash
+  112  docker ps
+  113  docker exec -it 2bb0350c1ed8
+  114  docker exec -it 2bb0350c1ed8 bash
+  115  vi Dockerfile
+  116  docker build -t sujith9 .
+  117  vi Dockerfile
+  118  docker build -t sujith91 .
+  119  vi Dockerfile
+  120  docker build -t sujith911 .
+  121  ls
+  122  docker images
+  123  docker run -it -d --sujith123 8085:8080 f31194d53b05 bash
+  124  docker run -it -d sujith123 8085:8080 f31194d53b05 bash
+  125  docker run -it -d --name sujith123 8085:8080 f31194d53b05 bash
+  126  docker run -it -d --name sujith123 f31194d53b05 bash
+  127  ls
+  128  history
+  129  docker volume create sujivolume1
+  130  docker volume ls
+  131  docker inspect sujivolume1
+  132  docker run -it -d --name container1 -v /opt/suji ubuntu
+  133  docker ps
+  134  docker exec -it 8773cd645f96
+  135  docker exec -it 8773cd645f96 bash
+  136  docker commit 8773cd645f96  mycustomimage
+  137  docker rm -f 8773cd645f96
+  138  docker images
+  139  docker run -it -d --name newcontainer -v sujivolume1:/opt/suji 2208497c606d
+  140  docker inspect sujivolume1
+  141  docker ps -a
+  142  docker exec -it dfe0e8a558f4 bash
+  143  cd /var/lib/docker/volumes/sujivolume1/_data
+  144  ld
+  145  ls
+  146  docker run -it -d --name newcontainer1 -v sujivolume1:/opt/ 2208497c606d
+  147  ls
+  148  sudo -i
+  149  ls
+  150  vi Dockerfile
+  151  docker build -t sujith911 .
+  152  vi Dockerfile
+  153  docker build -t sujith121 .
+  154  docker images
+  155  docker run -it -d --name ssbc -p 8085:8080 c432190dd494
+  156  vi Dockerfile
+  157  docker build -t devops .
+  158  docker images
+  159  docker run -it -d --name vinu -p 8089:8080 c432190dd494
+  160  docker ps
+  161  vi Dockerfile
+  162  docker build -t aws .
+  163  docker images
+  164  docker run -it -d --name vinu1 -p 8088:8080 c432190dd494
+  165  docker ps
+  166  vi Dockerfile
+  167  docker build -t aws1 .
+  168  docker images
+  169  docker run -it -d --name vinu21 -p 8086:8080 d1d022cf75c3
+  170  docker ps
+  171  vi Dockerfile
+  172  mv Dockerfile Dockerfile.env
+  173  docker build -t aws21 .
+  174  ls
+  175  vi Dockerfile.env
+  176  ls
+  177  history
+---------------------------------------------------------------------------------------------
