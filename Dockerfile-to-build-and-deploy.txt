@@ -1,0 +1,15 @@
+FROM maven:3.6.1-jdk-8
+#RUN apt update -y
+WORKDIR /opt/
+RUN apt install  wget -y
+RUN wget https://archive.apache.org/dist/tomcat/tomcat-8/v8.0.53/bin/apache-tomcat-8.0.53.tar.gz
+RUN tar -xvf apache-tomcat-8.0.53.tar.gz
+EXPOSE 8080
+CMD ["/opt/apache-tomcat-8.0.53/bin/catalina.sh", "run"]
+RUN apt install git -y
+WORKDIR /opt/
+RUN git clone https://github.com/RavitejaAdepudi/javawar.git
+WORKDIR /opt/javawar
+RUN mvn clean install
+RUN cp -R /opt/javawar/target/* /opt/apache-tomcat-8.0.53/webapps
+~
