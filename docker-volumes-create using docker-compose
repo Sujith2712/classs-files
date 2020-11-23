@@ -1,0 +1,11 @@
+  app:
+    image: nginx
+    container_name: abcd
+    ports:
+      - "8085:80"
+    volumes:
+      - "sujivolume:/opt"
+
+volumes:
+  sujivolume:
+    external: false
