@@ -1,0 +1,254 @@
+# https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04
+# https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04
+# https://unix.stackexchange.com/questions/363048/unable-to-locate-package-docker-ce-on-a-64bit-ubuntu
+
+ 1  docker images
+    3  docker run -it -d --name fayaz_tomcat -p 8081:8080 dab3cf97dd54
+    4  docker ps
+    5  docker exce -it b93325d4b008 bash
+    6  docker exec -it b93325d4b008 bash
+    7  docker pull sonarqube
+    8  docker images
+    9  docker run -it -d --name fayaz_sonar -p 9001:9000 b1002786c603
+   10  docker ps
+   12  docker exec -it 647764529a8d bash
+   19  docker pull tomcat:latest
+   20  docker run -d --name mytomcat -p 8080:8080 tomcat:latest
+   21  docker exec -it mytomcat /bin/bash
+   23  docker ps
+
+# https://github.com/docker-library/tomcat/issues/184
+# https://docs.docker.com/engine/reference/commandline/container_commit/
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+# how to push image to docker hub
+
+ 22  docker commit 7653ec879d50 ubuntu:14.04
+   23  docker images
+   24  docker ps
+   25  docker ps -a
+   26  docker run -it -d --name fayaz_git 19433a96f672
+   27  docker ps
+   28  docker ps -a
+   29  docker exec -it 6ab302
+   30  docker exec -it 6ab302 bash
+   31  docker commit 6ab3024f055d git_image:v1
+   32  docker images
+   22  docker login -u fayaz585
+   23  docker push  fayaz585/sample1:v1
+          	docker restart my_container
+	docker rm container_id
+	docker image rm image_id
+	docker system prune   --->to remove all unused containers, images and networks
+
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+# docker ADD and COPY arguments:
+
+
+vi Dockerfile
+	FROM ubuntu
+	ADD https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.3/bin/apache-tomcat-8.5.3.tar.gz /opt/
+	CMD ["/bin/bash"]
+	:wq
+docker build -t  image_name .
+
+
+# CMD vs ENTRYPONT
+
+FROM ubuntu
+MAINTAINER fayaz585
+RUN apt-get update
+ENTRYPOINT ["echo", "Hello"]
+CMD ["world"]
+
+#https://phoenixnap.com/kb/docker-cmd-vs-entrypoint
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+# How to create backup of the perticular directory from the container
+
+  258  docker volume create vol1
+  259  docker volume ls
+  260  docker inspect vol1
+  263  docker run -it -d --name cont1 -v /opt/fayaz585 ubuntu
+		or
+	docker run -it -d --name cont2 --mount source=vol2,target=/opt/fayaz585 ubuntu
+  264  docker ps
+  265  docker exec -it 550d6c0c0d33 bash
+		go through the directory fayaz585 and create there some files,
+		than exit from the container.
+		check those files in vol1/vol2.
+  266  docker commit 550d6c0c0d33 custem_image
+  267  docker rm -f 550d6c0c0d33
+  268  docker images
+  269  docker run -it -d --name custom1 -v vol1:/opt/fayaz585 IMAGE_ID
+		or
+	docker run -it -d --name NAME --mount source=vol2,target=/opt/fayaz585 IMAGE_ID
+  270  cd /var/lib/docker/volumes/vol1/_data/
+  275  docker ps
+  276  docker exec -it 74117f4031ee bash
+
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+	ARG is only available during the build of a Docker image (RUN etc),
+	not after the image is created and containers are started from it (ENTRYPOINT, CMD).
+
+	ENV values are available to containers, but also RUN-style commands during the 
+	Docker build starting with the line where they are introduced. If you set an environment
+	variable in an intermediate container using bash (RUN export VARI=5 && …) it will not persist
+	in the next command.
+
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+# How to build the perticular version of the package:
+Dockerfile:
+	[
+	ARG VERSION=latest
+	FROM tomcat:$VERSION
+	ARG VERSION
+	]
+docker build --build-arg VERSION=7 .
+
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+# Define environment variables to Connect to MySQL running in Docker container from a local machine
+
+	docker volume create mysql-volume
+	docker volume ls
+	docker run --name=mk-mysql -p3306:3306 -v mysql-volume:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=my-secret-password -d mysql/mysql-server:8.0.20
+	docker ps
+	docker logs mk-mysql
+	docker exec -it mk-mysql bash
+	mysql -u root -p
+	Enter password:
+	.......................
+	mysql> CREATE DATABASE MYSQLTEST;
+	Query OK, 1 row affected (0.00 sec)
+	
+	mysql> update mysql.user set host = ‘%’ where user=’root’;
+	Query OK, 1 row affected (0.02 sec)
+
+#https://towardsdatascience.com/connect-to-mysql-running-in-docker-container-from-a-local-machine-6d996c574e55
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+# Docker network
+
+
+  523  docker network create -d bridge Network1
+  524  docker network ls
+  525  docker inspect bridge
+  526  docker run -it -d --name Net1 --network Network ubuntu
+  528  docker inspect Net1
+  529  docker network create -d bridge Network2
+  530  docker inspect bridge
+  531  docker network ls
+  532  docker run -it -d --name Net2 --network Network2 ubuntu
+  533  docker ps
+  534  docker inspect Net2
+  535  docker ps
+  536  docker exec -it c1e9efd8c4e3 bash
+
+# connect a docker container to multiple docker networks
+
+docker network create -d bridge Network1
+docker network create -d bridge Network2
+docker run -it -d --name Container1 --network Network1 ubuntu
+docker network connect Network2 Container1
+
+#https://www.edureka.co/community/65174/connect-docker-container-docker-networks-that-have-created
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+# How To Share Data between Docker Containers
+
+
+# https://www.digitalocean.com/community/tutorials/how-to-share-data-between-docker-containers
+
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+# How To Install Docker Compose On Ubuntu
+#how to set volume in docker compose by using boolean
+
+
+  547  sudo apt-get update
+  548  sudo apt-get upgrade
+  555  sudo curl -L https://github.com/docker/compose/releases/download/1.18.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+  556  sudo chmod +x /usr/local/bin/docker-compose
+  557  docker-compose --version
+  559  cd /home/
+  560  ls
+  561  touch docker-compose.yml
+	version: '3'
+	
+	services:
+	        fayaz_compose:
+	        image: nginx:latest
+	        container_name: compose
+	        ports:
+	                  - "80:80"
+	        volumes:
+	                  - "volume1:/opt/fayaz585"
+	
+	volumes:
+	       volume1:
+	            external: false
+  562  ls
+  563  vi docker-compose.yml
+  575  docker-compose up -d
+  576  docker images
+  578  docker volume ls
+  579  docker ps
+  580  docker exec -it 4820a3dc253d bash
+	cd /opt//fayaz585
+	touch file{1..5}
+	ls
+	exit
+  581  cd /var/lib/docker/volumes/home_volume1/_data/
+
+
+#https://phoenixnap.com/kb/install-docker-compose-ubuntu
+#https://www.digitalocean.com/community/tutorials/how-to-install-docker-compose-on-ubuntu-16-04
+#https://devopsheaven.com/docker/docker-compose/volumes/2018/01/16/volumes-in-docker-compose.html
+#https://medium.com/better-programming/setting-up-mysql-database-in-a-docker-d6c69a3e9afe
+
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+# docker-compose.yml   (json_file backup)
+
+
+version: '3'
+
+services:
+        fayaz_compose:
+                build: .
+                container_name: json_compose
+
+                ports:
+                        -  "8087:8080"
+
+	volumes:
+	                  - "volume1:/opt/apache-tomcat-8.5.3/webapps/binary"
+volumes:
+	volume1:
+	            external: false
+
+
+
+
+FROM maven:3.6.1-jdk-8
+RUN apt update -y
+WORKDIR /opt/
+RUN apt install  wget -y
+RUN wget https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.3/bin/apache-tomcat-8.5.3.tar.gz
+RUN tar -xvf apache-tomcat-8.5.3.tar.gz
+EXPOSE 8080
+CMD ["/opt/apache-tomcat-8.5.3/bin/catalina.sh", "run"]
+RUN apt install git -y
+WORKDIR /opt/
+RUN git clone https://github.com/RavitejaAdepudi/javawar.git
+WORKDIR /opt/javawar
+RUN mvn clean install
+RUN cp -R /opt/javawar/target/* /opt/apache-tomcat-8.5.3/webapps
